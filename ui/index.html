@@ -4,8 +4,10 @@
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="center">
-            <img src="https://shubhxotic.github.io/assets/images/2016-05-06-015837.jpg" id="img-index" class="img-medium"/>
+        <div class="center" style="text-align:center; max-width:400px;">
+            <img src="https://shubhxotic.github.io/assets/images/2016-05-06-015837.jpg" id="img-index" class="img-medium slideshow"/>
+            <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170304_193043595.jpg?raw=true" id="img-index" class="img-medium slideshow"/>
+            <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170305_171905094_HDR.jpg?raw=true" id="img-index" class="img-medium slideshow"/>
         </div>
         <br>
         <div class="center text-big bold" id="upper html">
@@ -15,7 +17,21 @@
         <h1 style="text-align: center; ">Yo, this is a good luking webpage </h1>
 </div>
         <script type="text/javascript" src="ui/main.js">
-       
+        </script>
+        <script>
+            var ind=0;
+            function sliding(){
+                var i=0;
+                x=doxument.getElementByClassName("slideshow");
+                for(i=0;i<x.length;i++)
+                {
+                    x[i].style.display="none";
+                }
+                ind++;
+                ind=ind%x.length;
+                x[ind].style.display="block";
+                setTimeout(sliding,4000);
+            }
         </script>
         <script>
             alert('Hi, welcome to my webpage');
