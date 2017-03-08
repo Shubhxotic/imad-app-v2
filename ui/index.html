@@ -2,6 +2,11 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <style>
+            .slideshow{
+                display:none;
+            }
+        </style>
     </head>
     <body>
         <div class="center" style="text-align:center; max-width:400px;">
@@ -20,9 +25,10 @@
         </script>
         <script>
             var ind=0;
+            sliding();
             function sliding(){
                 var i=0;
-                x=doxument.getElementByClassName("slideshow");
+                var x=document.getElementByClassName("slideshow");
                 for(i=0;i<x.length;i++)
                 {
                     x[i].style.display="none";
