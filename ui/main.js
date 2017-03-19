@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var elem=document.getElementById('upper html');
+var elem=document.getElementById('upper_html');
 elem.innerHTML= "This is Shubham's Website";
 
 var marginLeft=0;
@@ -25,7 +25,7 @@ function moveright() {
 	}
 }
 
-image.onclick= function()
+image.onclick = function()
 {
 	var interval= setInterval(moveright,100);
 }
@@ -92,3 +92,4 @@ console.log("nam="+nam);
 request.open('GET','http://127.0.0.1:8000/submit-name?name='+nam,true);
 request.send(null);
 }
+

@@ -38,13 +38,49 @@
 
 <hr/>
 <div class="center" style="align:center; margin: 0 auto;">
-	<input type="text" id="commentBox1">
+	<input type="text" id="commentBox1" placeholder="Add Comment">
 	<input type="submit" name="Add Comment" id="submitAr1">
 	<ui id="namelistAr1">
 		<li>yo</li>
 	</ui>
 </div></div>
-<script type="text/javascript" src="ui/CommentBox.js">
+<!--<script type="text/javascript" src="ui/main1.js">
+</script>-->
+<script >
+	var ab1=document.getElementById('submitAr1');
+submitAr1.onclick=function(){
+	//Create a request
+	var request=new XMLHttpRequest();
+
+	//get response and render it
+	request.onreadystatechange = function(){
+		if(request.readyState === XMLHttpRequest.DONE)
+		{
+			if(request.status === 200)
+			{
+				comments=[];
+				var xyz='';
+				var response=request.responseText();
+				comments=JSON.parse(response);
+				for(var i=0;i<comments.length; i++){
+					xyz+='<li>'+comments[i]+'</li>';
+				}
+				var temp=document.getElementById('namelistAr1');
+				temp.innerHTML=xyz;
+			}
+		}
+	}
+
+	//make a request
+	var cbox1=document.getElementById('commentBox1');
+	var cbox1Text=cbox1.value;
+	console.log('127.0.0.1:8000/submit-comment?comment='+cbox1Text);
+	request.open('GET','http://127.0.0.1:8000/submit-comment?comment='+cbox1Text,true);
+	//request.open('GET','127.0.0.1:8000/submit-comment1?comment='+cbox1Text,true);
+	//request.open('GET','127.0.0.1:8000/article-one/'+cbox1Text,true);
+	request.send(null);
+}
+
 </script>
 </body>
 </html>
