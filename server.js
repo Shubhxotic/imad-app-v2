@@ -243,15 +243,16 @@ app.get('/articles',function(req,res){
 		else
 		{
 			console.log(result.rows.length);
+			var articleData;
 			if(result.rows.length === 0)
 			{
-				var articleData=result.rows[0];
+				 articleData=result.rows[0];
 				console.log("sdad"+articleData);
 				res.sendFile(createTemplate(articleData));
 				res.status(404).send('articlese not FOUNd');
 			}
 			else{
-				var articleData=result.rows[0];
+				 articleData=result.rows[0];
 				res.sendFile(createTemplate(articleData));			
 			}
 		}
