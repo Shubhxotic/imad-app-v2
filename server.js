@@ -245,7 +245,6 @@ app.get('/articles',function(req,res){
 			console.log(result.rows.length);
 			if(result.rows.length === 0)
 			{
-				
 				var articleData=result.rows[0];
 				console.log("sdad"+articleData);
 				res.sendFile(createTemplate(articleData));
