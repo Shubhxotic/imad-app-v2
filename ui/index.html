@@ -2,6 +2,8 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             .slideshow{
                 display:none;
@@ -9,7 +11,20 @@
         </style>
     </head>
     <body>
-        <div class="center" style="text-align:center; max-width:400px; max-height:400px; margin-left:450px;">
+        <div class="center background toprow">
+            <input type="text" id="usernm" placeholder="username">
+            <input type="password" id="passwd" placeholder="password">
+            <br>
+            <label id="checkLogin" style="color: #FFFFFF"></label>
+            <br>
+            <input type="submit" value="Log In" id="LogIn" class="SessionBtn">
+            <input type="submit" value="Sign Up" id="SignUp" class="SessionBtn">
+            <input type="submit" value="Log Out" id="LogOut" class="SessionBtn">
+            <br>
+        </div>
+        <hr/>
+
+        <div class="center" style="text-align:center; max-width:400px; max-height:400px; margin-left: 480px; ">
             <!--<img src="https://shubhxotic.github.io/assets/images/2016-05-06-015837.jpg" id="img-index" class="img-medium slideshow" style="width:100%; height:100%; max-height:300px;"/>
             <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170304_193043595.jpg?raw=true" style="width:100%; height:100%; max-height:300px;" id="img-index" class="img-medium slideshow"/>
             <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170305_171905094_HDR.jpg?raw=true" style="width:100%; height:100%; max-height:300px;" id="img-index" class="img-medium slideshow"/>-->
@@ -17,21 +32,21 @@
             <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170304_193043595.jpg?raw=true" style="width:350px; height: 300px; " id="img-index" class="img-medium slideshow"/>
             <img src="https://github.com/Shubhxotic/Shubhxotic.github.io/blob/master/assets/images/IMG_20170305_171905094_HDR.jpg?raw=true" style="width:350px; height: 300px; " id="img-index" class="img-medium slideshow"/>
         </div>
-        
-        <br>
-        
         <div class="center text-big bold" id="upper_html">
             Hi! I am shubham and this is a node.js webapp
         </div>
-        
         <div>
-        <h1 style="text-align: center; ">Yo, this is a good luking webpage </h1>
+        <h1 style="text-align: center; ">Click the like button below</h1>
         </div>
         
         <div class="footer center">
-        This button <button id="counter">Counter</button> has been clicked <span id="count"> 0 </span> times.  
+        This  <button id="counter" class="blueBtn" >Like <i class="fa fa-thumbs-o-up"></i></button> button has been clicked <span id="count"> 0 </span> times.  
         <hr/>
-        
+            <a href="/articles/article-one"><button id="A1">Article One</button></a>
+            <a href="/articles/article-two"><button id="A2">Article Two</button></a>
+            <a href="/articles/article-three"><button id="A3">Article Three</button></a>
+        <hr/>
+
         <input type="text" id="name" placeholder="name"></input>
         <input type="submit" name="Submit" id="submit1"/>
         <ul id="namelist">              
@@ -39,6 +54,17 @@
             <li>address</li>
             <li>akldns</li>
         </ul>
+        <hr/>
+        <div>
+            <textarea id="CommentBox" style="width:800px;" placeholder="Write your comments here.."></textarea>
+            <br>
+            <input type="submit" name="Add Comment" id="submitCom"/>
+            <br>
+            <ul id="displayCom">
+                
+            </ul>
+        </div>
+
         </div>
 
         <script type="text/javascript" src="ui/main.js">

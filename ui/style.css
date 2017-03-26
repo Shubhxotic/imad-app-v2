@@ -19,4 +19,35 @@ body {
 .img-medium {
     height: 200px;
 }
- 
+
+.background{
+	background-color: #000000;
+}
+
+.toprow{
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	padding: 10px;
+	display: inline-block;
+
+}
+
+.blueBtn{
+	background-color: #0004FF;
+	border-radius: 15%;
+}
+
+.SessionBtn{
+	width: 90px;
+	background-color: #000FFB;
+	color: white;
+	text-align: center;
+}
+#SignUp{
+	background-color: #298313;
+}
+
+#LogOut{
+	background-color: #FF0F0F;
+}

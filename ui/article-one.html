@@ -46,21 +46,25 @@
 </div></div>
 <!--<script type="text/javascript" src="ui/main1.js">
 </script>-->
-<script >
+<script>
 	var ab1=document.getElementById('submitAr1');
-submitAr1.onclick=function(){
+	submitAr1.onclick=function(){
 	//Create a request
 	var request=new XMLHttpRequest();
 
 	//get response and render it
 	request.onreadystatechange = function(){
+		var response=request.responseText;
+				console.log("response="+response);
+				
 		if(request.readyState === XMLHttpRequest.DONE)
 		{
 			if(request.status === 200)
 			{
 				comments=[];
 				var xyz='';
-				var response=request.responseText();
+				var response=request.responseText;
+				console.log("response="+response);
 				comments=JSON.parse(response);
 				for(var i=0;i<comments.length; i++){
 					xyz+='<li>'+comments[i]+'</li>';

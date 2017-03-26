@@ -23,6 +23,7 @@
 		<h1>Article Three</h1>
 	</div>
 	<div>
+	<p id="date"></p>
 		Sat, Feb 18, 12:58:23PM
 	</div>
 	<div>
@@ -48,6 +49,9 @@
 </div>
 <script type="text/javascript" src="ui/CommentBox.js">
 </script>
-
+<script>
+	var x=new Date();
+	document.getElementById('date').innerHTML=x.toDateString();
+</script>
 </body>
 </html>
