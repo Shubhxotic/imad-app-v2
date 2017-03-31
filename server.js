@@ -48,7 +48,7 @@ app.use(session({
 	secret: 'Some random string',
 	cookie: {maxAge: 1000*60*60*24*30}
 }));
-
+/*
 function createTemplate(data){
 	var title=data.title;
 	console.log("title="+title);
@@ -84,7 +84,7 @@ function createTemplate(data){
 	`;
 	return htmlTemplate;	
 }
-
+*/
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -99,6 +99,16 @@ app.get('/counter',function(req,res){
 	res.send(counter.toString());
 });*/
 
+
+
+
+
+
+
+
+
+
+/*
 app.get('/counter',function(req,res){
 	console.log("entering counter end point");
 	pool.query("Select * from count",function(err,result){
@@ -123,7 +133,18 @@ app.get('/counter',function(req,res){
 		});
 	}
 	});
-});
+});*/
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 var names=[];
@@ -154,6 +175,24 @@ app.get('/article-one/:comment',function(req,res){
 });
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var com1=[];
 app.get('/submit-comment',function(req,res){  //URL: /submit-name?name=xxxxxx
 	var com=req.query.comment;
@@ -184,6 +223,25 @@ app.get('/ui/madi.png', function (req, res) {
 });
 var commentar1=[];
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //app.get('/article-one',function(req,res){
 	/*var com=req.query.comment;
@@ -202,6 +260,9 @@ var commentar1=[];
 	res.sendFile(path.join(__dirname,'ui', 'article-two.html'));
 });
 */
+
+
+/*3
 app.get('/articles/:articleName',function(req,res){
 	var articleName=req.params.articleName;
 	console.log("article name inside / style="+articleName);
@@ -371,6 +432,6 @@ app.get('/test-db',function(req,res)
 		}
 	});
 });
-
+*/
 
 
